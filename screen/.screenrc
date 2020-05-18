@@ -1,0 +1,6 @@
+term screen-256color
+attrcolor b ".I" # use bright colors for bold
+console off   # dont put stuff on the screen from /dev/console
+shell -$SHELL # load shell profile
+startup_message off # Don't display the copyright page
+termcapinfo xterm* ti@:te@ # Enable mouse scrolling and scroll bar history scrolling
