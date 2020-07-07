@@ -56,6 +56,8 @@ set ai "autoindent
 set visualbell "visual bell, because pc speakers are so 80's
 set showmatch "shows all search matches
 set hlsearch "highlight last search pattern
+set ignorecase " case insensitive searching
+set smartcase " case sensitive searching if there is an uppercase
 set incsearch "incremental search
 set encoding=utf8 "you can work this out right?
 set fileformats=unix,dos
@@ -67,4 +69,5 @@ set ttyfast "go fasta!
 set colorcolumn=110 "80 is stupid
 set mouse-=a "disable visual mouse stuff
 set backspace=indent,eol,start " allow backspace to delete the autoindent, linebreaks or the start of insert mode
+set nocompatible " drop vi compatibility
 "set ruler
