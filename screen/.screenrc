@@ -1,6 +1,9 @@
 term screen-256color
+vbell off
 attrcolor b ".I" # use bright colors for bold
 console off   # dont put stuff on the screen from /dev/console
 shell -$SHELL # load shell profile
 startup_message off # Don't display the copyright page
+autodetach on # Autodetach session on hangup instead of terminating screen completely
+defscrollback 30000 # Use a 30000-line scrollback buffer
 termcapinfo xterm* ti@:te@ # Enable mouse scrolling and scroll bar history scrolling
