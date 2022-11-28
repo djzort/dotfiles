@@ -112,4 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# source ~/perl5/perlbrew/etc/bashrc
+source ~/perl5/perlbrew/etc/bashrc
