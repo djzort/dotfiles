@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 
 source ~/perl5/perlbrew/etc/bashrc
+eval `keychain -q --eval id_rsa id_ed25519`
