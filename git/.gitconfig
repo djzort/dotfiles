@@ -1,0 +1,11 @@
+[user]
+name = Dean Hamstead
+email = dean@fragfest.com.au
+[color]
+ui = auto
+[push]
+default = simple
+[alias]
+stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
+[pull]
+rebase = true
