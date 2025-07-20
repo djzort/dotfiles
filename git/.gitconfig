@@ -5,7 +5,17 @@ email = dean@fragfest.com.au
 ui = auto
 [push]
 default = simple
+autoSetupRemote = true
 [alias]
 stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
 [pull]
 rebase = true
+[merge]
+conflictStyle = zdiff3
+[core]
+fsmonitor = true
+pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+diffFilter = diff-so-fancy --patch
+[pager]
+show = diff-so-fancy | less --tabs=1,5 -RFX
