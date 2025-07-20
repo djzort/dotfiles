@@ -1,0 +1,10 @@
+\set QUIET 1
+\pset null '(null)'
+\pset pager off
+\timing
+\set PROMPT1 '%M:%> %n@%/%R%#%x '
+\set PROMPT2 '%M %n@%/%R %# '
+\x auto
+\set VERBOSITY verbose
+\set QUIET 0
+
