@@ -8,6 +8,7 @@ default = simple
 autoSetupRemote = true
 [alias]
 stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
+patch = !git --no-pager diff --no-color
 [pull]
 rebase = true
 [merge]
