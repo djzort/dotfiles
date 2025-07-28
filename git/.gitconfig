@@ -20,3 +20,5 @@ pager = diff-so-fancy | less --tabs=4 -RFX
 diffFilter = diff-so-fancy --patch
 [pager]
 show = diff-so-fancy | less --tabs=1,5 -RFX
+[rebase]
+	autoStash = true
