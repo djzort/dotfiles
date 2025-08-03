@@ -1,28 +1,39 @@
-[user]
-name = Dean Hamstead
-email = dean@fragfest.com.au
-[color]
-ui = auto
-[push]
-default = simple
-autoSetupRemote = true
-followTags = true
 [alias]
-stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
-patch = !git --no-pager diff --no-color
-[pull]
-rebase = true
-[merge]
-conflictStyle = zdiff3
-[core]
-fsmonitor = true
-pager = diff-so-fancy | less --tabs=4 -RFX
-untrackedCache = true
-[interactive]
-diffFilter = diff-so-fancy --patch
-[pager]
-show = diff-so-fancy | less --tabs=1,5 -RFX
-[rebase]
-autoStash = true
+    patch = !git --no-pager diff --no-color
+    stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
+
 [branch]
-sort = -committerdate
+    sort = -committerdate
+
+[color]
+    ui = auto
+
+[core]
+    fsmonitor = true
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    untrackedCache = true
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+
+[merge]
+    conflictStyle = zdiff3
+
+[pager]
+    show = diff-so-fancy | less --tabs=1,5 -RFX
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+    default = simple
+    followTags = true
+
+[rebase]
+    autoStash = true
+
+[user]
+    email = dean@fragfest.com.au
+    name = Dean Hamstead
+
