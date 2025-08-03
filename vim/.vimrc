@@ -2,8 +2,9 @@ syntax on
 "autocmd FileType perl set number
 filetype indent plugin on
 autocmd Filetype perl :set equalprg=perltidy
-"packadd! supertab
+packadd! supertab
 packadd! taglist
+packadd editorconfig
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 
