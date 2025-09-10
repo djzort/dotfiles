@@ -18,6 +18,7 @@
 
 [merge]
     conflictStyle = zdiff3
+	keepbackup = false
 
 [pager]
     show = diff-so-fancy | less --tabs=1,5 -RFX
@@ -28,12 +29,36 @@
 [push]
     autoSetupRemote = true
     default = simple
-    followTags = true
+	followtags = true
 
 [rebase]
     autoStash = true
+    autosquash = true
+	updateRefs = true
 
 [user]
     email = dean@fragfest.com.au
     name = Dean Hamstead
 
+[fetch]
+    prune = true
+    pruneTags = true
+    fsckobjects = true
+[diff]
+    noprefix = true
+	context = 10
+	algorithm = histogram
+	colorMoved = dimmed_zebra
+	mnemonicPrefix = true
+	renames = copy
+[commit]
+    verbose = true
+[rerere]
+	enabled = true
+        autoupdate = true
+[transfer]
+    fsckobjects = true
+[receive]
+	fsckObjects = true
+[tag]
+        sort = version:refname
