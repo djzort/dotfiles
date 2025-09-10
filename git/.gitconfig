@@ -1,64 +1,53 @@
 [alias]
-    patch = !git --no-pager diff --no-color
-    stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
-
+	patch = !git --no-pager diff --no-color
+	stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
 [branch]
-    sort = -committerdate
-
+	sort = -committerdate
 [color]
-    ui = auto
-
+	ui = auto
+[commit]
+	verbose = true
 [core]
-    fsmonitor = true
-    pager = diff-so-fancy | less --tabs=4 -RFX
-    untrackedCache = true
-
-[interactive]
-    diffFilter = diff-so-fancy --patch
-
-[merge]
-    conflictStyle = zdiff3
-	keepbackup = false
-
-[pager]
-    show = diff-so-fancy | less --tabs=1,5 -RFX
-
-[pull]
-    rebase = true
-
-[push]
-    autoSetupRemote = true
-    default = simple
-	followtags = true
-
-[rebase]
-    autoStash = true
-    autosquash = true
-	updateRefs = true
-
-[user]
-    email = dean@fragfest.com.au
-    name = Dean Hamstead
-
-[fetch]
-    prune = true
-    pruneTags = true
-    fsckobjects = true
+	fsmonitor = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	untrackedCache = true
 [diff]
-    noprefix = true
-	context = 10
 	algorithm = histogram
 	colorMoved = dimmed_zebra
+	context = 10
 	mnemonicPrefix = true
+	noprefix = true
 	renames = copy
-[commit]
-    verbose = true
-[rerere]
-	enabled = true
-        autoupdate = true
-[transfer]
-    fsckobjects = true
+[fetch]
+	fsckobjects = true
+	prune = true
+	pruneTags = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[merge]
+	conflictStyle = zdiff3
+	keepbackup = false
+[pager]
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+	default = simple
+	followtags = true
+[rebase]
+	autoStash = true
+	autosquash = true
+	updateRefs = true
 [receive]
 	fsckObjects = true
+[rerere]
+	autoupdate = true
+	enabled = true
 [tag]
-        sort = version:refname
+	sort = version:refname
+[transfer]
+	fsckobjects = true
+[user]
+	email = dean@fragfest.com.au
+	name = Dean Hamstead
