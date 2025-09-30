@@ -8,8 +8,10 @@
 [commit]
 	verbose = true
 [core]
+	compression = 9
 	fsmonitor = true
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	preloadindex = true
 	untrackedCache = true
 [diff]
 	algorithm = histogram
@@ -22,8 +24,12 @@
 	fsckobjects = true
 	prune = true
 	pruneTags = true
+[grep]
+	patternType = perl
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[log]
+	date = iso
 [merge]
 	conflictStyle = zdiff3
 	keepbackup = false
