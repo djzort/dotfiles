@@ -1,10 +1,16 @@
+[advice]
+	defaultBranchName = false
 [alias]
-	co = checkout
+	checkout-remote = "!f() { git checkout -b \"$1\" \"origin/$1\"; }; f"
 	ci = commit
-	st = status
+	co = checkout
+	ls = show --pretty= --name-only HEAD
 	patch = !git --no-pager diff --no-color
+	resync = "!f() { r=${1:-origin}; git fetch \"$r\" && git reset --hard \"$r/$(git branch --show-current)\"; }; f"
+	st = status
 	stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
 [branch]
+	autosetuprebase = always
 	sort = -committerdate
 [color]
 	ui = auto
@@ -37,10 +43,14 @@
 	date = iso
 [merge]
 	conflictStyle = zdiff3
+	ff = only
 	keepbackup = false
 [pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	log = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 [pull]
+	ff = only
 	rebase = true
 [push]
 	autoSetupRemote = true
