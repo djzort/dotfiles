@@ -124,5 +124,7 @@ fi
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+export PATH="$HOME/bin:$PATH"
+
 source ~/perl5/perlbrew/etc/bashrc
 eval `keychain -q --eval id_rsa id_ed25519`
