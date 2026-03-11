@@ -4,11 +4,13 @@
 	checkout-remote = "!f() { git checkout -b \"$1\" \"origin/$1\"; }; f"
 	ci = commit
 	co = checkout
+	lg = log --graph --oneline --decorate --all
 	ls = show --pretty= --name-only HEAD
 	patch = !git --no-pager diff --no-color
 	resync = "!f() { r=${1:-origin}; git fetch \"$r\" && git reset --hard \"$r/$(git branch --show-current)\"; }; f"
 	st = status
 	stashed = stash list --pretty=format:'%gd: %Cred%h%Creset %Cgreen[%ar]%Creset %s'
+	wip = commit -am 'WIP'
 [branch]
 	autosetuprebase = always
 	sort = -committerdate
@@ -25,26 +27,32 @@
 [diff]
 	algorithm = histogram
 	colorMoved = dimmed_zebra
+	colorMovedWS = allow-indentation-change
 	context = 10
 	mnemonicPrefix = true
 	noprefix = true
 	renames = copy
 [fetch]
 	fsckobjects = true
+	parallel = 0
 	prune = true
 	pruneTags = true
+[gc]
+	writeCommitGraph = true
 [grep]
 	patternType = perl
-[interactive]
-	diffFilter = diff-so-fancy --patch
 [init]
 	defaultBranch = master
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [log]
 	date = iso
 [merge]
 	conflictStyle = zdiff3
 	ff = only
 	keepbackup = false
+[pack]
+	threads = 0
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	log = diff-so-fancy | less --tabs=1,5 -RFX
@@ -59,6 +67,7 @@
 [rebase]
 	autoStash = true
 	autosquash = true
+	missingCommitsCheck = error
 	updateRefs = true
 [receive]
 	fsckObjects = true
