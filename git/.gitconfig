@@ -1,5 +1,7 @@
 [advice]
 	defaultBranchName = false
+[blame]
+	coloring = highlightRecent
 [alias]
 	checkout-remote = "!f() { git checkout -b \"$1\" \"origin/$1\"; }; f"
 	ci = commit
@@ -17,6 +19,7 @@
 [color]
 	ui = auto
 [commit]
+	cleanup = scissors
 	verbose = true
 [core]
 	compression = 9
