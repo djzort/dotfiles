@@ -35,6 +35,8 @@
 	mnemonicPrefix = true
 	noprefix = true
 	renames = copy
+[feature]
+	manyFiles = true
 [fetch]
 	fsckobjects = true
 	parallel = 0
@@ -71,6 +73,7 @@
 	autoStash = true
 	autosquash = true
 	missingCommitsCheck = error
+	stat = true
 	updateRefs = true
 [receive]
 	fsckObjects = true
