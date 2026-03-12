@@ -57,6 +57,7 @@
 	conflictStyle = zdiff3
 	ff = only
 	keepbackup = false
+	renames = true
 [pack]
 	threads = 0
 [pager]
@@ -66,6 +67,7 @@
 [pull]
 	ff = only
 	rebase = true
+	twohead = zdiff3
 [push]
 	autoSetupRemote = true
 	default = simple
@@ -73,6 +75,7 @@
 [rebase]
 	autoStash = true
 	autosquash = true
+	keepEmpty = false
 	missingCommitsCheck = error
 	stat = true
 	updateRefs = true
