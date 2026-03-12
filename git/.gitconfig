@@ -42,6 +42,7 @@
 	parallel = 0
 	prune = true
 	pruneTags = true
+	writeCommitGraph = true
 [gc]
 	writeCommitGraph = true
 [grep]
