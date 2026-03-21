@@ -76,3 +76,8 @@ set mouse-=a "disable visual mouse stuff
 set backspace=indent,eol,start " allow backspace to delete the autoindent, linebreaks or the start of insert mode
 set nocompatible " drop vi compatibility
 "set ruler
+
+" Check if the terminal supports 24-bit color
+if (has("termguicolors"))
+  set termguicolors
+endif
