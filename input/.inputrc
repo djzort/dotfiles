@@ -20,3 +20,5 @@ set show-all-if-ambiguous on
 
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
+
+set menu-complete-display-prefix on
