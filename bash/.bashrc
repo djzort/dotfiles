@@ -10,13 +10,18 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
+
+HISTIGNORE='&:ls:ll:la:cd:cd -:pwd:exit:clear:history:reboot:shutdown:* --help'
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # Confirm before running historical commands with !! or !n
 shopt -s histverify
+
+# if a history substitution fails, let you re-edit it
+shopt -s histreedit
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=-1
@@ -35,6 +40,12 @@ set -o noclobber
 
 # Enable extended globs
 shopt -s extglob
+
+# Save multi-line commands as one entry
+shopt -s cmdhist
+
+# don't try to complete empty lines
+shopt -s no_empty_cmd_completion
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
