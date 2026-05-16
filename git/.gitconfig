@@ -8,6 +8,7 @@
 	co = checkout
 	lg = log --graph --oneline --decorate --all
 	ls = show --pretty= --name-only HEAD
+	msg = log -1 --format=%B
 	patch = !git --no-pager diff --no-color
 	resync = "!f() { r=${1:-origin}; git fetch \"$r\" && git reset --hard \"$r/$(git branch --show-current)\"; }; f"
 	st = status
