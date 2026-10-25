@@ -3,8 +3,9 @@
 
 theme = iTerm2 Light Background
 # theme = tokyonight
-font-family = Monego Nerd Font Fix
-font-size = 14
+#font-family = Monego Nerd Font Fix
+font-family = Liberation Mono Regular
+font-size = 12
 # font-synthetic-style = bold-italic
 font-feature = -calt
 font-feature = -liga
